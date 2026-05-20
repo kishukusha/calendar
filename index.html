@@ -1,11 +1,94 @@
-<a href="webcal://kishukusha.github.io/calendar/NIKKA_CALENDAR.ics">
-日課を追加
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>寄宿舎カレンダー登録</title>
+
+<style>
+body{
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background:linear-gradient(135deg,#eef3ff,#ffffff);
+    margin:0;
+    padding:30px;
+    text-align:center;
+}
+
+h1{
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+p{
+    font-size:13px;
+    color:#666;
+    margin-bottom:25px;
+}
+
+.card{
+    background:white;
+    max-width:420px;
+    margin:15px auto;
+    padding:18px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+a{
+    display:block;
+    padding:18px;
+    margin:12px 0;
+    border-radius:14px;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:15px;
+}
+
+.nikka{background:#34c759;}
+.toban{background:#ff9500;}
+.all{background:#007aff;}
+
+small{
+    display:block;
+    margin-top:15px;
+    color:#888;
+    font-size:11px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>📅 寄宿舎カレンダー</h1>
+<p>タップでカレンダーに追加（iPhone推奨）</p>
+
+<div class="card">
+
+<!-- 🟡 日課 -->
+<a class="nikka"
+href="webcal://kishukusha.github.io/calendar/NIKKA_CALENDAR.ics">
+🟡 日課を追加
 </a>
 
-<a href="webcal://kishukusha.github.io/calendar/TOBAN_CALENDAR.ics">
-週番を追加
+<!-- 🟠 週番 -->
+<a class="toban"
+href="webcal://kishukusha.github.io/calendar/TOBAN_CALENDAR.ics">
+🟠 週番を追加
 </a>
 
-<a href="webcal://kishukusha.github.io/calendar/ALL_CALENDAR.ics">
-全体を追加
+<!-- 🔵 全体 -->
+<a class="all"
+href="webcal://kishukusha.github.io/calendar/ALL_CALENDAR.ics">
+🔵 全体予定を追加
 </a>
+
+</div>
+
+<small>
+※Safariで開いてください（LINE内ブラウザは非推奨）
+</small>
+
+</body>
+</html>
