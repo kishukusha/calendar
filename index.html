@@ -3,88 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>寄宿舎カレンダー登録</title>
+<title>カレンダー登録</title>
 
 <style>
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: #f5f5f5;
-    margin: 0;
-    padding: 20px;
-    text-align: center;
+body{
+    font-family:-apple-system;
+    background:#f4f6ff;
+    margin:0;
+    padding:30px;
+    text-align:center;
 }
 
-h1 {
-    font-size: 22px;
-    margin-bottom: 20px;
+h1{
+    font-size:22px;
+    margin-bottom:10px;
 }
 
-.card {
-    background: white;
-    padding: 15px;
-    margin: 15px auto;
-    border-radius: 12px;
-    max-width: 400px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+p{
+    font-size:13px;
+    color:#666;
+    margin-bottom:25px;
 }
 
-a.button {
-    display: block;
-    padding: 14px;
-    margin: 10px 0;
-    background: #007aff;
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
+.card{
+    background:white;
+    margin:15px auto;
+    padding:18px;
+    border-radius:18px;
+    max-width:420px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
 }
 
-a.button.green { background: #34c759; }
-a.button.orange { background: #ff9500; }
-a.button.gray { background: #555; }
+a{
+    display:block;
+    padding:18px;
+    margin:12px 0;
+    border-radius:14px;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:15px;
+}
 
-small {
-    color: #666;
+.nikka{background:#34c759;}
+.toban{background:#ff9500;}
+.all{background:#007aff;}
+
+.note{
+    font-size:11px;
+    color:#888;
+    margin-top:20px;
 }
 </style>
 
 </head>
+
 <body>
 
-<h1>📅 寄宿舎カレンダー登録</h1>
+<h1>📅 カレンダー登録</h1>
+<p>タップ → 「追加」を押すだけ</p>
 
 <div class="card">
-    <h2>🔵 全体予定（ALL）</h2>
-    <a class="button" href="https://calendar.google.com/calendar/u/0/r?cid=https://kishukusha.github.io/calendar/ALL_CALENDAR.ics">
-        ワンタップで登録
-    </a>
-    <a class="button gray" href="https://kishukusha.github.io/calendar/ALL_CALENDAR.ics">
-        直接ICSを開く
-    </a>
+
+<a class="nikka"
+href="https://kishukusha.github.io/calendar/NIKKA_CALENDAR.ics">
+🟡 日課を追加
+</a>
+
+<a class="toban"
+href="https://kishukusha.github.io/calendar/TOBAN_CALENDAR.ics">
+🟠 週番を追加
+</a>
+
+<a class="all"
+href="https://kishukusha.github.io/calendar/ALL_CALENDAR.ics">
+🔵 全体予定を追加
+</a>
+
 </div>
 
-<div class="card">
-    <h2>🟡 日課（NIKKA）</h2>
-    <a class="button green" href="https://calendar.google.com/calendar/u/0/r?cid=https://kishukusha.github.io/calendar/NIKKA_CALENDAR.ics">
-        ワンタップで登録
-    </a>
-    <a class="button gray" href="https://kishukusha.github.io/calendar/NIKKA_CALENDAR.ics">
-        直接ICSを開く
-    </a>
+<div class="note">
+※必ずSafariで開いてください（LINE内ブラウザはNG）
 </div>
-
-<div class="card">
-    <h2>🟠 週番（TOBAN）</h2>
-    <a class="button orange" href="https://calendar.google.com/calendar/u/0/r?cid=https://kishukusha.github.io/calendar/TOBAN_CALENDAR.ics">
-        ワンタップで登録
-    </a>
-    <a class="button gray" href="https://kishukusha.github.io/calendar/TOBAN_CALENDAR.ics">
-        直接ICSを開く
-    </a>
-</div>
-
-<br>
-<small>※iPhoneはSafariで開いてください</small>
 
 </body>
 </html>
