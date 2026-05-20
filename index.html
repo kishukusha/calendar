@@ -1,90 +1,11 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>カレンダー登録</title>
-
-<style>
-body{
-    font-family:-apple-system;
-    background:#f4f6ff;
-    margin:0;
-    padding:30px;
-    text-align:center;
-}
-
-h1{
-    font-size:22px;
-    margin-bottom:10px;
-}
-
-p{
-    font-size:13px;
-    color:#666;
-    margin-bottom:25px;
-}
-
-.card{
-    background:white;
-    margin:15px auto;
-    padding:18px;
-    border-radius:18px;
-    max-width:420px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.08);
-}
-
-a{
-    display:block;
-    padding:18px;
-    margin:12px 0;
-    border-radius:14px;
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-    font-size:15px;
-}
-
-.nikka{background:#34c759;}
-.toban{background:#ff9500;}
-.all{background:#007aff;}
-
-.note{
-    font-size:11px;
-    color:#888;
-    margin-top:20px;
-}
-</style>
-
-</head>
-
-<body>
-
-<h1>📅 カレンダー登録</h1>
-<p>タップ → 「追加」を押すだけ</p>
-
-<div class="card">
-
-<a class="nikka"
-href="https://kishukusha.github.io/calendar/NIKKA_CALENDAR.ics">
-🟡 日課を追加
+<a href="webcal://kishukusha.github.io/calendar/NIKKA_CALENDAR.ics">
+日課を追加
 </a>
 
-<a class="toban"
-href="https://kishukusha.github.io/calendar/TOBAN_CALENDAR.ics">
-🟠 週番を追加
+<a href="webcal://kishukusha.github.io/calendar/TOBAN_CALENDAR.ics">
+週番を追加
 </a>
 
-<a class="all"
-href="https://kishukusha.github.io/calendar/ALL_CALENDAR.ics">
-🔵 全体予定を追加
+<a href="webcal://kishukusha.github.io/calendar/ALL_CALENDAR.ics">
+全体を追加
 </a>
-
-</div>
-
-<div class="note">
-※必ずSafariで開いてください（LINE内ブラウザはNG）
-</div>
-
-</body>
-</html>
