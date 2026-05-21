@@ -1,94 +1,476 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>寄宿舎カレンダー登録</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>寄宿舎カレンダー</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
 
 <style>
-body{
-    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background:linear-gradient(135deg,#eef3ff,#ffffff);
+
+*{
     margin:0;
-    padding:30px;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Noto Sans JP',sans-serif;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:24px;
+
+    /* 視認性を高めた背景 */
+    background:#eaf4ff;
+
+    color:#111827;
+}
+
+/* カード */
+
+.card{
+    width:100%;
+    max-width:520px;
+
+    background:white;
+
+    border-radius:32px;
+
+    padding:32px 24px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.08);
+
     text-align:center;
 }
 
+/* タイトル */
+
 h1{
-    font-size:22px;
-    margin-bottom:10px;
+    font-size:34px;
+    font-weight:900;
+
+    line-height:1.5;
+
+    margin-bottom:14px;
+
+    color:#0f172a;
 }
 
-p{
-    font-size:13px;
-    color:#666;
-    margin-bottom:25px;
+.desc{
+    font-size:15px;
+
+    line-height:1.8;
+
+    color:#374151;
+
+    margin-bottom:28px;
 }
 
-.card{
-    background:white;
-    max-width:420px;
-    margin:15px auto;
+/* 手順 */
+
+.steps{
+    background:#f3f7fb;
+
+    border:2px solid #d6e4f2;
+
+    border-radius:24px;
+
     padding:18px;
-    border-radius:18px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+    margin-bottom:28px;
+
+    text-align:left;
 }
 
-a{
-    display:block;
-    padding:18px;
-    margin:12px 0;
-    border-radius:14px;
+.step{
+    display:flex;
+    align-items:flex-start;
+
+    gap:12px;
+
+    margin-bottom:16px;
+}
+
+.step:last-child{
+    margin-bottom:0;
+}
+
+.step-num{
+    min-width:36px;
+    height:36px;
+
+    border-radius:50%;
+
+    background:#005fcc;
+
     color:white;
-    text-decoration:none;
-    font-weight:bold;
+
+    font-weight:900;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
     font-size:15px;
 }
 
-.nikka{background:#34c759;}
-.toban{background:#ff9500;}
-.all{background:#007aff;}
+.step-text{
+    font-size:14px;
 
-small{
-    display:block;
-    margin-top:15px;
-    color:#888;
-    font-size:11px;
+    line-height:1.8;
+
+    color:#111827;
 }
-</style>
 
+/* ボタン */
+
+.buttons{
+    display:flex;
+    flex-direction:column;
+
+    gap:22px;
+}
+
+/* 共通 */
+
+.btn{
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:20px 24px;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:900;
+
+    font-size:20px;
+
+    transition:.15s ease;
+
+    overflow:hidden;
+
+    box-shadow:
+        inset 0 -8px 0 rgba(0,0,0,.18),
+        0 8px 18px rgba(0,0,0,.12);
+}
+
+/* ツヤ */
+
+.btn::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+    right:0;
+
+    height:55%;
+
+    border-radius:999px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(255,255,255,.22),
+            rgba(255,255,255,0)
+        );
+}
+
+/* hover */
+
+.btn:hover{
+    transform:translateY(3px);
+}
+
+/* active */
+
+.btn:active{
+    transform:translateY(7px);
+
+    box-shadow:
+        inset 0 -2px 0 rgba(0,0,0,.18),
+        0 2px 4px rgba(0,0,0,.1);
+}
+
+/* 左側 */
+
+.left{
+    display:flex;
+    align-items:center;
+
+    gap:16px;
+}
+
+/* アイコン */
+
+.icon{
+    width:58px;
+    height:58px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.22);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:26px;
+
+    border:2px solid rgba(255,255,255,.5);
+}
+
+/* テキスト */
+
+.label{
+    text-align:left;
+}
+
+.main{
+    font-size:22px;
+}
+
+.sub{
+    font-size:13px;
+
+    margin-top:3px;
+
+    opacity:.95;
+}
+
+/* 矢印 */
+
+.arrow{
+    font-size:28px;
+
+    font-weight:900;
+}
+
+/* 色
+   色覚多様性に配慮して
+   明度差を大きく */
+
+.green{
+    background:#008a2e;
+}
+
+.orange{
+    background:#c25e00;
+}
+
+.blue{
+    background:#005fcc;
+}
+
+/* 注意 */
+
+.note{
+    margin-top:28px;
+
+    font-size:13px;
+
+    line-height:1.9;
+
+    color:#374151;
+}
+
+/* モバイル */
+
+@media(max-width:600px){
+
+    h1{
+        font-size:28px;
+    }
+
+    .btn{
+        padding:18px 20px;
+
+        font-size:18px;
+    }
+
+    .main{
+        font-size:20px;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
 
-<h1>📅 寄宿舎カレンダー</h1>
-<p>タップでカレンダーに追加（iPhone推奨）</p>
-
 <div class="card">
 
-<!-- 🟡 日課 -->
-<a class="nikka"
+<h1>
+📅 寄宿舎カレンダー
+</h1>
+
+<p class="desc">
+下のボタンからカレンダーを追加できます
+</p>
+
+<!-- 手順 -->
+
+<div class="steps">
+
+<div class="step">
+<div class="step-num">1</div>
+
+<div class="step-text">
+追加したいカレンダーをタップ
+</div>
+</div>
+
+<div class="step">
+<div class="step-num">2</div>
+
+<div class="step-text">
+「照会」または「検索」をタップ
+</div>
+</div>
+
+<div class="step">
+<div class="step-num">3</div>
+
+<div class="step-text">
+右上の「✓（レ点）」をタップ
+</div>
+</div>
+
+<div class="step">
+<div class="step-num">4</div>
+
+<div class="step-text">
+→ 完了！予定が自動で反映されます
+</div>
+</div>
+
+</div>
+
+<!-- ボタン -->
+
+<div class="buttons">
+
+<!-- 日課 -->
+
+<a class="btn green"
 href="webcal://kishukusha.github.io/calendar/NIKKA_CALENDAR.ics">
-🟡 日課を追加
+
+<div class="left">
+
+<div class="icon">
+🟢
+</div>
+
+<div class="label">
+
+<div class="main">
+日課を追加
+</div>
+
+<div class="sub">
+Daily Schedule
+</div>
+
+</div>
+
+</div>
+
+<div class="arrow">
+→
+</div>
+
 </a>
 
-<!-- 🟠 週番 -->
-<a class="toban"
+<!-- 週番 -->
+
+<a class="btn orange"
 href="webcal://kishukusha.github.io/calendar/TOBAN_CALENDAR.ics">
-🟠 週番を追加
+
+<div class="left">
+
+<div class="icon">
+🟠
+</div>
+
+<div class="label">
+
+<div class="main">
+週番を追加
+</div>
+
+<div class="sub">
+Weekly Duty
+</div>
+
+</div>
+
+</div>
+
+<div class="arrow">
+→
+</div>
+
 </a>
 
-<!-- 🔵 全体 -->
-<a class="all"
+<!-- 全体 -->
+
+<a class="btn blue"
 href="webcal://kishukusha.github.io/calendar/ALL_CALENDAR.ics">
-🔵 全体予定を追加
+
+<div class="left">
+
+<div class="icon">
+🔵
+</div>
+
+<div class="label">
+
+<div class="main">
+全体予定を追加
+</div>
+
+<div class="sub">
+All Events
+</div>
+
+</div>
+
+</div>
+
+<div class="arrow">
+→
+</div>
+
 </a>
 
 </div>
 
-<small>
-※Safariで開いてください（LINE内ブラウザは非推奨）
-</small>
+<div class="note">
+※ Safariで開くとスムーズに登録できます<br>
+LINE内ブラウザは非推奨です
+</div>
+
+</div>
 
 </body>
 </html>
