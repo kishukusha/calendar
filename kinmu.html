@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>寄宿舎カレンダー</title>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>
+寄宿舎カレンダー
+</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap"
+rel="stylesheet">
 
 <style>
 
@@ -21,22 +32,24 @@
 
 body{
 
-    font-family:'Noto Sans JP',sans-serif;
+    font-family:
+    'Noto Sans JP',
+    sans-serif;
+
+    background:
+    linear-gradient(
+        180deg,
+        #edf6ff 0%,
+        #f8fbff 100%
+    );
 
     min-height:100vh;
+
+    padding:24px;
 
     display:flex;
     justify-content:center;
     align-items:center;
-
-    padding:24px;
-
-    background:
-        linear-gradient(
-            180deg,
-            #edf7ff 0%,
-            #f7fbff 100%
-        );
 
     color:#0f172a;
 }
@@ -46,7 +59,7 @@ body{
 .card{
 
     width:100%;
-    max-width:820px;
+    max-width:860px;
 
     background:white;
 
@@ -55,7 +68,8 @@ body{
     padding:36px 28px;
 
     box-shadow:
-        0 20px 50px rgba(0,0,0,.08);
+    0 20px 50px
+    rgba(0,0,0,.08);
 }
 
 /* タイトル */
@@ -87,9 +101,10 @@ h1{
 
 .steps{
 
-    background:#f6faff;
+    background:#f5f9ff;
 
-    border:2px solid #d9e8f6;
+    border:
+    2px solid #dbe8f5;
 
     border-radius:28px;
 
@@ -122,11 +137,11 @@ h1{
     border-radius:50%;
 
     background:
-        linear-gradient(
-            135deg,
-            #008cff,
-            #69c7ff
-        );
+    linear-gradient(
+        135deg,
+        #0ea5ff,
+        #6fd0ff
+    );
 
     color:white;
 
@@ -137,7 +152,8 @@ h1{
     align-items:center;
 
     box-shadow:
-        0 8px 18px rgba(0,140,255,.25);
+    0 8px 18px
+    rgba(0,140,255,.25);
 }
 
 .step-text{
@@ -166,7 +182,7 @@ h1{
 
 .top-button{
 
-    margin-bottom:32px;
+    margin-bottom:34px;
 }
 
 /* 個人ボタン2列 */
@@ -175,7 +191,8 @@ h1{
 
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:
+    1fr 1fr;
 
     gap:18px;
 }
@@ -190,46 +207,46 @@ h1{
     align-items:center;
     justify-content:space-between;
 
+    text-decoration:none;
+
     padding:18px 22px;
 
     border-radius:999px;
 
-    text-decoration:none;
-
     overflow:hidden;
-
-    transition:
-        transform .15s ease,
-        box-shadow .15s ease;
 
     color:white;
 
     box-shadow:
-        0 12px 24px rgba(0,0,0,.12);
+    0 12px 24px
+    rgba(0,0,0,.12);
+
+    transition:
+    transform .15s ease,
+    box-shadow .15s ease;
 
     cursor:pointer;
 
-    -webkit-tap-highlight-color:transparent;
+    z-index:1;
+
+    -webkit-tap-highlight-color:
+    transparent;
 
     touch-action:manipulation;
-
-    z-index:1;
 }
 
-/* 子要素のタップ無効化 */
+/* 子要素でタップ阻害しない */
 
 .btn *{
     pointer-events:none;
 }
 
-/* ホバー */
+/* アニメーション */
 
 .btn:hover{
 
     transform:scale(.98);
 }
-
-/* タップ */
 
 .btn:active{
 
@@ -253,14 +270,14 @@ h1{
     border-radius:999px;
 
     background:
-        linear-gradient(
-            to bottom,
-            rgba(255,255,255,.28),
-            rgba(255,255,255,0)
-        );
+    linear-gradient(
+        to bottom,
+        rgba(255,255,255,.28),
+        rgba(255,255,255,0)
+    );
 }
 
-/* 左 */
+/* 左側 */
 
 .left{
 
@@ -282,9 +299,11 @@ h1{
 
     border-radius:50%;
 
-    background:rgba(255,255,255,.20);
+    background:
+    rgba(255,255,255,.20);
 
-    border:2px solid rgba(255,255,255,.45);
+    border:
+    2px solid rgba(255,255,255,.45);
 
     display:flex;
     justify-content:center;
@@ -332,41 +351,41 @@ h1{
 .blue{
 
     background:
-        linear-gradient(
-            90deg,
-            #0d8fff,
-            #88d1ff
-        );
+    linear-gradient(
+        90deg,
+        #0d8fff,
+        #88d1ff
+    );
 }
 
 .green{
 
     background:
-        linear-gradient(
-            90deg,
-            #14b8a6,
-            #7ce3d8
-        );
+    linear-gradient(
+        90deg,
+        #14b8a6,
+        #7ce3d8
+    );
 }
 
 .orange{
 
     background:
-        linear-gradient(
-            90deg,
-            #f97316,
-            #ffc085
-        );
+    linear-gradient(
+        90deg,
+        #f97316,
+        #ffc085
+    );
 }
 
 .purple{
 
     background:
-        linear-gradient(
-            90deg,
-            #8b5cf6,
-            #ccb5ff
-        );
+    linear-gradient(
+        90deg,
+        #8b5cf6,
+        #ccb5ff
+    );
 }
 
 /* 注意 */
@@ -410,6 +429,7 @@ h1{
 }
 
 </style>
+
 </head>
 
 <body>
@@ -421,7 +441,8 @@ h1{
 </h1>
 
 <p class="desc">
-まず共通カレンダーを追加 → 次に個人カレンダーを追加してください
+まず共通カレンダーを追加 →
+次に個人カレンダーを追加してください
 </p>
 
 <!-- 手順 -->
@@ -475,7 +496,7 @@ h1{
 <div class="top-button">
 
 <a class="btn blue"
-href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.github.io/calendar/予定表_ALL.ics">
+href="https://kishukusha.github.io/calendar/予定表_ALL.ics">
 
 <div class="left">
 
@@ -490,7 +511,7 @@ href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.gith
 </div>
 
 <div class="sub">
-Outlookへ追加
+カレンダー追加
 </div>
 
 </div>
@@ -513,8 +534,10 @@ Outlookへ追加
 
 <div class="grid">
 
+<!-- 左 -->
+
 <a class="btn purple"
-href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.github.io/calendar/小松.ics">
+href="https://kishukusha.github.io/calendar/小松.ics">
 
 <div class="left">
 
@@ -529,7 +552,7 @@ href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.gith
 </div>
 
 <div class="sub">
-Outlookへ追加
+個人カレンダー
 </div>
 
 </div>
@@ -542,8 +565,10 @@ Outlookへ追加
 
 </a>
 
+<!-- 右 -->
+
 <a class="btn orange"
-href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.github.io/calendar/河西.ics">
+href="https://kishukusha.github.io/calendar/河西.ics">
 
 <div class="left">
 
@@ -558,7 +583,7 @@ href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.gith
 </div>
 
 <div class="sub">
-Outlookへ追加
+個人カレンダー
 </div>
 
 </div>
@@ -571,8 +596,10 @@ Outlookへ追加
 
 </a>
 
+<!-- 左 -->
+
 <a class="btn blue"
-href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.github.io/calendar/保延.ics">
+href="https://kishukusha.github.io/calendar/保延.ics">
 
 <div class="left">
 
@@ -587,7 +614,7 @@ href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.gith
 </div>
 
 <div class="sub">
-Outlookへ追加
+個人カレンダー
 </div>
 
 </div>
@@ -600,8 +627,10 @@ Outlookへ追加
 
 </a>
 
+<!-- 右 -->
+
 <a class="btn green"
-href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.github.io/calendar/石原.ics">
+href="https://kishukusha.github.io/calendar/石原.ics">
 
 <div class="left">
 
@@ -616,7 +645,7 @@ href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.gith
 </div>
 
 <div class="sub">
-Outlookへ追加
+個人カレンダー
 </div>
 
 </div>
@@ -629,8 +658,10 @@ Outlookへ追加
 
 </a>
 
+<!-- 左 -->
+
 <a class="btn orange"
-href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.github.io/calendar/石川.ics">
+href="https://kishukusha.github.io/calendar/石川.ics">
 
 <div class="left">
 
@@ -645,7 +676,7 @@ href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.gith
 </div>
 
 <div class="sub">
-Outlookへ追加
+個人カレンダー
 </div>
 
 </div>
@@ -658,8 +689,10 @@ Outlookへ追加
 
 </a>
 
+<!-- 右 -->
+
 <a class="btn purple"
-href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.github.io/calendar/岩脇.ics">
+href="https://kishukusha.github.io/calendar/岩脇.ics">
 
 <div class="left">
 
@@ -674,7 +707,7 @@ href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.gith
 </div>
 
 <div class="sub">
-Outlookへ追加
+個人カレンダー
 </div>
 
 </div>
@@ -687,8 +720,10 @@ Outlookへ追加
 
 </a>
 
+<!-- 左 -->
+
 <a class="btn green"
-href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.github.io/calendar/水下.ics">
+href="https://kishukusha.github.io/calendar/水下.ics">
 
 <div class="left">
 
@@ -703,7 +738,7 @@ href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.gith
 </div>
 
 <div class="sub">
-Outlookへ追加
+個人カレンダー
 </div>
 
 </div>
@@ -716,8 +751,10 @@ Outlookへ追加
 
 </a>
 
+<!-- 右 -->
+
 <a class="btn blue"
-href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.github.io/calendar/雨宮.ics">
+href="https://kishukusha.github.io/calendar/雨宮.ics">
 
 <div class="left">
 
@@ -732,7 +769,7 @@ href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.gith
 </div>
 
 <div class="sub">
-Outlookへ追加
+個人カレンダー
 </div>
 
 </div>
@@ -750,7 +787,8 @@ Outlookへ追加
 <div class="note">
 
 ※ Outlook / iPhone / Googleカレンダー対応<br>
-※ まず共通 → 次に個人の順で追加してください
+※ まず共通 →
+次に個人の順で追加してください
 
 </div>
 
