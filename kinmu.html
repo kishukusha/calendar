@@ -19,7 +19,7 @@ href="https://fonts.googleapis.com">
 href="https://fonts.gstatic.com"
 crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap"
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
 rel="stylesheet">
 
 <style>
@@ -33,84 +33,133 @@ rel="stylesheet">
 body{
 
     font-family:
-    'Noto Sans JP',
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
     sans-serif;
 
-    background:
-    linear-gradient(
-        180deg,
-        #edf6ff 0%,
-        #f8fbff 100%
-    );
+    background:#f5f5f7;
 
     min-height:100vh;
 
-    padding:24px;
+    padding:26px;
 
     display:flex;
     justify-content:center;
     align-items:center;
 
-    color:#0f172a;
+    color:#1d1d1f;
+
+    overflow-x:hidden;
+
+    -webkit-font-smoothing:
+    antialiased;
 }
 
-/* カード */
+.bg-blur{
+
+    position:fixed;
+
+    width:420px;
+    height:420px;
+
+    border-radius:50%;
+
+    filter:blur(90px);
+
+    z-index:0;
+
+    opacity:.45;
+}
+
+.bg1{
+
+    background:#8ec5ff;
+
+    top:-120px;
+    left:-120px;
+}
+
+.bg2{
+
+    background:#d8b4ff;
+
+    bottom:-120px;
+    right:-120px;
+}
 
 .card{
 
+    position:relative;
+
+    z-index:1;
+
     width:100%;
-    max-width:860px;
+    max-width:920px;
 
-    background:white;
+    background:
+    rgba(255,255,255,.72);
 
-    border-radius:36px;
+    backdrop-filter:blur(24px);
 
-    padding:36px 28px;
+    border:
+    1px solid
+    rgba(255,255,255,.7);
+
+    border-radius:42px;
+
+    padding:42px 34px;
 
     box-shadow:
-    0 20px 50px
-    rgba(0,0,0,.08);
+    0 10px 40px
+    rgba(0,0,0,.06);
 }
-
-/* タイトル */
 
 h1{
 
     text-align:center;
 
-    font-size:38px;
-    font-weight:900;
+    font-size:52px;
 
-    margin-bottom:12px;
+    font-weight:800;
+
+    letter-spacing:-2.5px;
+
+    line-height:1.05;
+
+    margin-bottom:16px;
 }
 
 .desc{
 
     text-align:center;
 
-    font-size:15px;
+    font-size:17px;
 
     line-height:1.9;
 
-    color:#475569;
+    color:#6e6e73;
 
-    margin-bottom:30px;
+    margin-bottom:42px;
+
+    font-weight:500;
 }
-
-/* 手順 */
 
 .steps{
 
-    background:#f5f9ff;
+    background:
+    rgba(255,255,255,.62);
 
     border:
-    2px solid #dbe8f5;
+    1px solid
+    rgba(0,0,0,.05);
 
-    border-radius:28px;
+    border-radius:30px;
 
-    padding:20px;
+    padding:24px;
 
-    margin-bottom:34px;
+    margin-bottom:42px;
 }
 
 .step{
@@ -118,9 +167,9 @@ h1{
     display:flex;
     align-items:flex-start;
 
-    gap:14px;
+    gap:16px;
 
-    margin-bottom:16px;
+    margin-bottom:18px;
 }
 
 .step:last-child{
@@ -129,75 +178,50 @@ h1{
 
 .step-num{
 
-    width:40px;
-    height:40px;
+    width:42px;
+    height:42px;
 
-    min-width:40px;
+    min-width:42px;
 
     border-radius:50%;
 
-    background:
-    linear-gradient(
-        135deg,
-        #0ea5ff,
-        #6fd0ff
-    );
+    background:#0071e3;
 
     color:white;
 
-    font-weight:900;
+    font-size:15px;
+    font-weight:800;
 
     display:flex;
     justify-content:center;
     align-items:center;
-
-    box-shadow:
-    0 8px 18px
-    rgba(0,140,255,.25);
 }
 
 .step-text{
 
     font-size:15px;
 
-    line-height:1.8;
+    line-height:1.9;
 
-    color:#1e293b;
+    color:#1d1d1f;
+
+    padding-top:5px;
 }
-
-/* セクション */
 
 .section-title{
 
-    font-size:15px;
+    font-size:13px;
 
-    font-weight:900;
+    font-weight:700;
 
-    margin-bottom:14px;
+    letter-spacing:1px;
 
-    color:#334155;
+    color:#6e6e73;
+
+    margin-bottom:16px;
+
+    padding-left:6px;
 }
-
-/* 共通ボタン */
-
-.top-button{
-
-    margin-bottom:34px;
-}
-
-/* 個人ボタン2列 */
-
-.grid{
-
-    display:grid;
-
-    grid-template-columns:
-    1fr 1fr;
-
-    gap:18px;
-}
-
-/* ボタン */
 
 .btn{
 
@@ -209,222 +233,238 @@ h1{
 
     text-decoration:none;
 
-    padding:18px 22px;
+    padding:20px 24px;
 
-    border-radius:999px;
+    border-radius:28px;
 
     overflow:hidden;
 
-    color:white;
+    color:#1d1d1f;
+
+    background:
+    rgba(255,255,255,.82);
+
+    border:
+    1px solid
+    rgba(0,0,0,.06);
+
+    backdrop-filter:blur(16px);
 
     box-shadow:
-    0 12px 24px
-    rgba(0,0,0,.12);
+    0 4px 20px
+    rgba(0,0,0,.05);
 
     transition:
-    transform .15s ease,
-    box-shadow .15s ease;
+    transform .18s ease,
+    box-shadow .18s ease,
+    background .18s ease;
 
     cursor:pointer;
 
-    z-index:1;
-
-    -webkit-tap-highlight-color:
-    transparent;
-
-    touch-action:manipulation;
+    width:100%;
 }
-
-/* 子要素でタップ阻害しない */
-
-.btn *{
-    pointer-events:none;
-}
-
-/* アニメーション */
 
 .btn:hover{
 
-    transform:scale(.98);
+    transform:
+    translateY(-2px);
+
+    box-shadow:
+    0 12px 28px
+    rgba(0,0,0,.08);
+
+    background:
+    rgba(255,255,255,.96);
 }
 
 .btn:active{
 
-    transform:scale(.95);
+    transform:
+    scale(.985);
 }
-
-/* 光沢 */
-
-.btn::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-    left:0;
-    right:0;
-
-    height:55%;
-
-    border-radius:999px;
-
-    background:
-    linear-gradient(
-        to bottom,
-        rgba(255,255,255,.28),
-        rgba(255,255,255,0)
-    );
-}
-
-/* 左側 */
 
 .left{
 
     display:flex;
     align-items:center;
 
-    gap:14px;
-
-    position:relative;
-    z-index:2;
+    gap:15px;
 }
-
-/* アイコン */
 
 .icon{
 
     width:52px;
     height:52px;
 
+    min-width:52px;
+
     border-radius:50%;
-
-    background:
-    rgba(255,255,255,.20);
-
-    border:
-    2px solid rgba(255,255,255,.45);
 
     display:flex;
     justify-content:center;
     align-items:center;
 
-    font-size:22px;
+    font-size:20px;
+
+    color:white;
 }
 
-/* ラベル */
+.blue .icon{
+    background:#0071e3;
+}
 
-.label{
+.green .icon{
+    background:#34c759;
+}
 
-    text-align:left;
+.orange .icon{
+    background:#ff9f0a;
+}
+
+.purple .icon{
+    background:#af52de;
 }
 
 .main{
 
     font-size:19px;
-    font-weight:900;
+
+    font-weight:700;
+
+    letter-spacing:-0.6px;
 }
 
 .sub{
 
     font-size:12px;
 
-    margin-top:2px;
+    margin-top:4px;
 
-    opacity:.95;
+    color:#6e6e73;
 }
-
-/* 矢印 */
 
 .arrow{
 
-    font-size:24px;
+    font-size:34px;
 
-    font-weight:900;
+    font-weight:300;
 
-    position:relative;
-    z-index:2;
+    color:#86868b;
+
+    transition:.25s ease;
 }
 
-/* 色 */
+.no-arrow{
 
-.blue{
+    visibility:hidden;
 
-    background:
-    linear-gradient(
-        90deg,
-        #0d8fff,
-        #88d1ff
-    );
+    width:20px;
 }
 
-.green{
+.personal-wrap{
 
-    background:
-    linear-gradient(
-        90deg,
-        #14b8a6,
-        #7ce3d8
-    );
+    margin-top:20px;
+
+    margin-left:34px;
+
+    display:none;
+
+    animation:fade .35s ease;
 }
 
-.orange{
-
-    background:
-    linear-gradient(
-        90deg,
-        #f97316,
-        #ffc085
-    );
+.personal-wrap.show{
+    display:block;
 }
 
-.purple{
+.grid{
 
-    background:
-    linear-gradient(
-        90deg,
-        #8b5cf6,
-        #ccb5ff
-    );
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:18px;
 }
 
-/* 注意 */
+@keyframes fade{
+
+    from{
+        opacity:0;
+        transform:
+        translateY(-8px)
+        translateX(-10px);
+    }
+
+    to{
+        opacity:1;
+        transform:
+        translateY(0)
+        translateX(0);
+    }
+}
 
 .note{
 
-    margin-top:34px;
+    margin-top:42px;
 
     text-align:center;
 
     font-size:13px;
 
-    line-height:1.9;
+    line-height:2;
 
-    color:#475569;
+    color:#6e6e73;
 }
 
-/* スマホ */
+@media(max-width:720px){
 
-@media(max-width:700px){
+    body{
+        padding:18px;
+    }
+
+    .card{
+
+        padding:32px 22px;
+
+        border-radius:32px;
+    }
+
+    h1{
+
+        font-size:38px;
+    }
 
     .grid{
 
         grid-template-columns:1fr;
     }
 
-    h1{
-
-        font-size:30px;
-    }
-
     .btn{
 
-        padding:16px 20px;
+        padding:18px 20px;
     }
 
     .main{
 
         font-size:17px;
+    }
+
+    .icon{
+
+        width:48px;
+        height:48px;
+
+        min-width:48px;
+    }
+
+    .arrow{
+
+        font-size:30px;
+    }
+
+    .personal-wrap{
+
+        margin-left:14px;
     }
 }
 
@@ -434,18 +474,19 @@ h1{
 
 <body>
 
+<div class="bg-blur bg1"></div>
+<div class="bg-blur bg2"></div>
+
 <div class="card">
 
 <h1>
-📅 寄宿舎カレンダー
+寄宿舎カレンダー
 </h1>
 
 <p class="desc">
-まず共通カレンダーを追加 →
-次に個人カレンダーを追加してください
+共通カレンダーを追加したあと、<br>
+個人カレンダーを追加してください
 </p>
-
-<!-- 手順 -->
 
 <div class="steps">
 
@@ -456,7 +497,7 @@ h1{
 </div>
 
 <div class="step-text">
-「全員共通カレンダー」を追加
+「全員共通予定」を追加
 </div>
 
 </div>
@@ -468,7 +509,7 @@ h1{
 </div>
 
 <div class="step-text">
-自分の名前のカレンダーを追加
+「個人カレンダー」を開く
 </div>
 
 </div>
@@ -480,7 +521,7 @@ h1{
 </div>
 
 <div class="step-text">
-右上の✓を押して完了
+自分の名前を選んで追加
 </div>
 
 </div>
@@ -490,54 +531,82 @@ h1{
 <!-- 共通 -->
 
 <div class="section-title">
-■ 共通カレンダー（全員必須）
+COMMON CALENDAR
 </div>
 
-<div class="top-button">
-
 <a class="btn blue"
-href="https://kishukusha.github.io/calendar/予定表_ALL.ics">
+href="webcal://kishukusha.github.io/calendar/予定表_ALL.ics">
 
 <div class="left">
 
 <div class="icon">
-📌
+📅
 </div>
 
-<div class="label">
+<div>
 
 <div class="main">
 全員共通予定
 </div>
 
 <div class="sub">
-カレンダー追加
+カレンダーを追加
 </div>
 
 </div>
 
 </div>
 
-<div class="arrow">
-→
+<div class="no-arrow">
+&nbsp;
 </div>
 
 </a>
 
-</div>
-
 <!-- 個人 -->
 
-<div class="section-title">
-■ 個人カレンダー（自分のみ）
+<div class="section-title"
+style="margin-top:42px;">
+PERSONAL CALENDAR
 </div>
+
+<button class="btn purple"
+onclick="togglePersonal()">
+
+<div class="left">
+
+<div class="icon">
+👥
+</div>
+
+<div>
+
+<div class="main">
+個人カレンダー
+</div>
+
+<div class="sub">
+タップして開く
+</div>
+
+</div>
+
+</div>
+
+<div class="arrow"
+id="toggleArrow">
+›
+</div>
+
+</button>
+
+<div class="personal-wrap"
+id="personalWrap">
 
 <div class="grid">
 
-<!-- 左 -->
-
-<a class="btn purple"
-href="https://kishukusha.github.io/calendar/小松.ics">
+<a class="btn blue"
+href="webcal://kishukusha.github.io/calendar/小松.ics">
 
 <div class="left">
 
@@ -545,7 +614,7 @@ href="https://kishukusha.github.io/calendar/小松.ics">
 👤
 </div>
 
-<div class="label">
+<div>
 
 <div class="main">
 小松
@@ -560,15 +629,13 @@ href="https://kishukusha.github.io/calendar/小松.ics">
 </div>
 
 <div class="arrow">
-→
+›
 </div>
 
 </a>
 
-<!-- 右 -->
-
 <a class="btn orange"
-href="https://kishukusha.github.io/calendar/河西.ics">
+href="webcal://kishukusha.github.io/calendar/河西.ics">
 
 <div class="left">
 
@@ -576,7 +643,7 @@ href="https://kishukusha.github.io/calendar/河西.ics">
 👤
 </div>
 
-<div class="label">
+<div>
 
 <div class="main">
 河西
@@ -591,15 +658,13 @@ href="https://kishukusha.github.io/calendar/河西.ics">
 </div>
 
 <div class="arrow">
-→
+›
 </div>
 
 </a>
 
-<!-- 左 -->
-
-<a class="btn blue"
-href="https://kishukusha.github.io/calendar/保延.ics">
+<a class="btn green"
+href="webcal://kishukusha.github.io/calendar/保延.ics">
 
 <div class="left">
 
@@ -607,7 +672,7 @@ href="https://kishukusha.github.io/calendar/保延.ics">
 👤
 </div>
 
-<div class="label">
+<div>
 
 <div class="main">
 保延
@@ -622,15 +687,13 @@ href="https://kishukusha.github.io/calendar/保延.ics">
 </div>
 
 <div class="arrow">
-→
+›
 </div>
 
 </a>
 
-<!-- 右 -->
-
-<a class="btn green"
-href="https://kishukusha.github.io/calendar/石原.ics">
+<a class="btn purple"
+href="webcal://kishukusha.github.io/calendar/石原.ics">
 
 <div class="left">
 
@@ -638,7 +701,7 @@ href="https://kishukusha.github.io/calendar/石原.ics">
 👤
 </div>
 
-<div class="label">
+<div>
 
 <div class="main">
 石原
@@ -653,15 +716,13 @@ href="https://kishukusha.github.io/calendar/石原.ics">
 </div>
 
 <div class="arrow">
-→
+›
 </div>
 
 </a>
 
-<!-- 左 -->
-
 <a class="btn orange"
-href="https://kishukusha.github.io/calendar/石川.ics">
+href="webcal://kishukusha.github.io/calendar/石川.ics">
 
 <div class="left">
 
@@ -669,7 +730,7 @@ href="https://kishukusha.github.io/calendar/石川.ics">
 👤
 </div>
 
-<div class="label">
+<div>
 
 <div class="main">
 石川
@@ -684,15 +745,13 @@ href="https://kishukusha.github.io/calendar/石川.ics">
 </div>
 
 <div class="arrow">
-→
+›
 </div>
 
 </a>
 
-<!-- 右 -->
-
-<a class="btn purple"
-href="https://kishukusha.github.io/calendar/岩脇.ics">
+<a class="btn blue"
+href="webcal://kishukusha.github.io/calendar/岩脇.ics">
 
 <div class="left">
 
@@ -700,7 +759,7 @@ href="https://kishukusha.github.io/calendar/岩脇.ics">
 👤
 </div>
 
-<div class="label">
+<div>
 
 <div class="main">
 岩脇
@@ -715,15 +774,13 @@ href="https://kishukusha.github.io/calendar/岩脇.ics">
 </div>
 
 <div class="arrow">
-→
+›
 </div>
 
 </a>
 
-<!-- 左 -->
-
 <a class="btn green"
-href="https://kishukusha.github.io/calendar/水下.ics">
+href="webcal://kishukusha.github.io/calendar/水下.ics">
 
 <div class="left">
 
@@ -731,7 +788,7 @@ href="https://kishukusha.github.io/calendar/水下.ics">
 👤
 </div>
 
-<div class="label">
+<div>
 
 <div class="main">
 水下
@@ -746,15 +803,13 @@ href="https://kishukusha.github.io/calendar/水下.ics">
 </div>
 
 <div class="arrow">
-→
+›
 </div>
 
 </a>
 
-<!-- 右 -->
-
-<a class="btn blue"
-href="https://kishukusha.github.io/calendar/雨宮.ics">
+<a class="btn purple"
+href="webcal://kishukusha.github.io/calendar/雨宮.ics">
 
 <div class="left">
 
@@ -762,7 +817,7 @@ href="https://kishukusha.github.io/calendar/雨宮.ics">
 👤
 </div>
 
-<div class="label">
+<div>
 
 <div class="main">
 雨宮
@@ -777,22 +832,52 @@ href="https://kishukusha.github.io/calendar/雨宮.ics">
 </div>
 
 <div class="arrow">
-→
+›
 </div>
 
 </a>
 
 </div>
 
+</div>
+
 <div class="note">
 
-※ Outlook / iPhone / Googleカレンダー対応<br>
-※ まず共通 →
-次に個人の順で追加してください
+※ iPhone / Outlook / Googleカレンダー対応<br>
+※ 共通 → 個人 の順で追加してください
 
 </div>
 
 </div>
+
+<script>
+
+function togglePersonal(){
+
+    const wrap =
+    document.getElementById(
+    "personalWrap");
+
+    const arrow =
+    document.getElementById(
+    "toggleArrow");
+
+    wrap.classList.toggle("show");
+
+    if(wrap.classList.contains("show")){
+
+        arrow.style.transform =
+        "rotate(90deg)";
+    }
+
+    else{
+
+        arrow.style.transform =
+        "rotate(0deg)";
+    }
+}
+
+</script>
 
 </body>
 </html>
