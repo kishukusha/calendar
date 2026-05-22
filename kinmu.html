@@ -169,7 +169,7 @@ h1{
     margin-bottom:32px;
 }
 
-/* 個人ボタンだけ2列 */
+/* 個人ボタン2列 */
 
 .grid{
 
@@ -212,6 +212,14 @@ h1{
     -webkit-tap-highlight-color:transparent;
 
     touch-action:manipulation;
+
+    z-index:1;
+}
+
+/* 子要素のタップ無効化 */
+
+.btn *{
+    pointer-events:none;
 }
 
 /* ホバー */
@@ -408,7 +416,9 @@ h1{
 
 <div class="card">
 
-<h1>📅 寄宿舎カレンダー</h1>
+<h1>
+📅 寄宿舎カレンダー
+</h1>
 
 <p class="desc">
 まず共通カレンダーを追加 → 次に個人カレンダーを追加してください
@@ -465,7 +475,7 @@ h1{
 <div class="top-button">
 
 <a class="btn blue"
-href="https://kishukusha.github.io/calendar/予定表_ALL.ics">
+href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.github.io/calendar/予定表_ALL.ics">
 
 <div class="left">
 
@@ -480,7 +490,7 @@ href="https://kishukusha.github.io/calendar/予定表_ALL.ics">
 </div>
 
 <div class="sub">
-必ず最初に追加
+Outlookへ追加
 </div>
 
 </div>
@@ -504,7 +514,7 @@ href="https://kishukusha.github.io/calendar/予定表_ALL.ics">
 <div class="grid">
 
 <a class="btn purple"
-href="webcal://kishukusha.github.io/calendar/小松.ics">
+href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.github.io/calendar/小松.ics">
 
 <div class="left">
 
@@ -519,7 +529,7 @@ href="webcal://kishukusha.github.io/calendar/小松.ics">
 </div>
 
 <div class="sub">
-個人カレンダー
+Outlookへ追加
 </div>
 
 </div>
@@ -533,7 +543,7 @@ href="webcal://kishukusha.github.io/calendar/小松.ics">
 </a>
 
 <a class="btn orange"
-href="webcal://kishukusha.github.io/calendar/河西.ics">
+href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.github.io/calendar/河西.ics">
 
 <div class="left">
 
@@ -548,7 +558,7 @@ href="webcal://kishukusha.github.io/calendar/河西.ics">
 </div>
 
 <div class="sub">
-個人カレンダー
+Outlookへ追加
 </div>
 
 </div>
@@ -562,7 +572,7 @@ href="webcal://kishukusha.github.io/calendar/河西.ics">
 </a>
 
 <a class="btn blue"
-href="webcal://kishukusha.github.io/calendar/保延.ics">
+href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.github.io/calendar/保延.ics">
 
 <div class="left">
 
@@ -577,7 +587,7 @@ href="webcal://kishukusha.github.io/calendar/保延.ics">
 </div>
 
 <div class="sub">
-個人カレンダー
+Outlookへ追加
 </div>
 
 </div>
@@ -591,7 +601,7 @@ href="webcal://kishukusha.github.io/calendar/保延.ics">
 </a>
 
 <a class="btn green"
-href="webcal://kishukusha.github.io/calendar/石原.ics">
+href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.github.io/calendar/石原.ics">
 
 <div class="left">
 
@@ -606,7 +616,7 @@ href="webcal://kishukusha.github.io/calendar/石原.ics">
 </div>
 
 <div class="sub">
-個人カレンダー
+Outlookへ追加
 </div>
 
 </div>
@@ -620,7 +630,7 @@ href="webcal://kishukusha.github.io/calendar/石原.ics">
 </a>
 
 <a class="btn orange"
-href="webcal://kishukusha.github.io/calendar/石川.ics">
+href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.github.io/calendar/石川.ics">
 
 <div class="left">
 
@@ -635,7 +645,7 @@ href="webcal://kishukusha.github.io/calendar/石川.ics">
 </div>
 
 <div class="sub">
-個人カレンダー
+Outlookへ追加
 </div>
 
 </div>
@@ -649,7 +659,7 @@ href="webcal://kishukusha.github.io/calendar/石川.ics">
 </a>
 
 <a class="btn purple"
-href="webcal://kishukusha.github.io/calendar/岩脇.ics">
+href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.github.io/calendar/岩脇.ics">
 
 <div class="left">
 
@@ -664,7 +674,7 @@ href="webcal://kishukusha.github.io/calendar/岩脇.ics">
 </div>
 
 <div class="sub">
-個人カレンダー
+Outlookへ追加
 </div>
 
 </div>
@@ -678,7 +688,7 @@ href="webcal://kishukusha.github.io/calendar/岩脇.ics">
 </a>
 
 <a class="btn green"
-href="webcal://kishukusha.github.io/calendar/水下.ics">
+href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.github.io/calendar/水下.ics">
 
 <div class="left">
 
@@ -693,7 +703,7 @@ href="webcal://kishukusha.github.io/calendar/水下.ics">
 </div>
 
 <div class="sub">
-個人カレンダー
+Outlookへ追加
 </div>
 
 </div>
@@ -707,7 +717,7 @@ href="webcal://kishukusha.github.io/calendar/水下.ics">
 </a>
 
 <a class="btn blue"
-href="webcal://kishukusha.github.io/calendar/雨宮.ics">
+href="https://outlook.live.com/calendar/0/addfromweb?url=https://kishukusha.github.io/calendar/雨宮.ics">
 
 <div class="left">
 
@@ -722,7 +732,7 @@ href="webcal://kishukusha.github.io/calendar/雨宮.ics">
 </div>
 
 <div class="sub">
-個人カレンダー
+Outlookへ追加
 </div>
 
 </div>
