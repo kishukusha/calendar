@@ -57,6 +57,8 @@ body{
     antialiased;
 }
 
+/* 背景 */
+
 .bg-blur{
 
     position:fixed;
@@ -89,6 +91,8 @@ body{
     right:-120px;
 }
 
+/* カード */
+
 .card{
 
     position:relative;
@@ -116,6 +120,8 @@ body{
     rgba(0,0,0,.06);
 }
 
+/* タイトル */
+
 h1{
 
     text-align:center;
@@ -131,6 +137,8 @@ h1{
     margin-bottom:16px;
 }
 
+/* 説明 */
+
 .desc{
 
     text-align:center;
@@ -145,6 +153,8 @@ h1{
 
     font-weight:500;
 }
+
+/* 手順 */
 
 .steps{
 
@@ -208,6 +218,8 @@ h1{
     padding-top:5px;
 }
 
+/* セクション */
+
 .section-title{
 
     font-size:13px;
@@ -222,6 +234,8 @@ h1{
 
     padding-left:6px;
 }
+
+/* ボタン */
 
 .btn{
 
@@ -351,8 +365,11 @@ h1{
 
     color:#86868b;
 
-    transition:.25s ease;
+    transition:
+    transform .3s ease;
 }
+
+/* 共通予定は矢印なし */
 
 .no-arrow{
 
@@ -360,6 +377,8 @@ h1{
 
     width:20px;
 }
+
+/* 個人一覧 */
 
 .personal-wrap{
 
@@ -369,11 +388,33 @@ h1{
 
     display:none;
 
-    animation:fade .35s ease;
+    opacity:0;
+
+    transform:
+    translateY(-10px)
+    translateX(-12px);
+
+    transition:
+    opacity .32s ease,
+    transform .32s ease;
 }
 
 .personal-wrap.show{
-    display:block;
+
+    opacity:1;
+
+    transform:
+    translateY(0)
+    translateX(0);
+}
+
+.personal-wrap.hide{
+
+    opacity:0;
+
+    transform:
+    translateY(-10px)
+    translateX(-12px);
 }
 
 .grid{
@@ -386,22 +427,7 @@ h1{
     gap:18px;
 }
 
-@keyframes fade{
-
-    from{
-        opacity:0;
-        transform:
-        translateY(-8px)
-        translateX(-10px);
-    }
-
-    to{
-        opacity:1;
-        transform:
-        translateY(0)
-        translateX(0);
-    }
-}
+/* 注意 */
 
 .note{
 
@@ -415,6 +441,8 @@ h1{
 
     color:#6e6e73;
 }
+
+/* スマホ */
 
 @media(max-width:720px){
 
@@ -488,6 +516,8 @@ h1{
 個人カレンダーを追加してください
 </p>
 
+<!-- 手順 -->
+
 <div class="steps">
 
 <div class="step">
@@ -521,7 +551,7 @@ h1{
 </div>
 
 <div class="step-text">
-自分の名前を選んで追加
+『検索』をタップ→右上の☑マークをタップ
 </div>
 
 </div>
@@ -599,6 +629,8 @@ id="toggleArrow">
 </div>
 
 </button>
+
+<!-- 展開 -->
 
 <div class="personal-wrap"
 id="personalWrap">
@@ -862,18 +894,37 @@ function togglePersonal(){
     document.getElementById(
     "toggleArrow");
 
-    wrap.classList.toggle("show");
-
     if(wrap.classList.contains("show")){
 
+        wrap.classList.remove("show");
+        wrap.classList.add("hide");
+
         arrow.style.transform =
-        "rotate(90deg)";
+        "rotate(0deg)";
+
+        setTimeout(() => {
+
+            wrap.style.display =
+            "none";
+
+            wrap.classList.remove("hide");
+
+        }, 320);
     }
 
     else{
 
+        wrap.style.display =
+        "block";
+
+        setTimeout(() => {
+
+            wrap.classList.add("show");
+
+        }, 10);
+
         arrow.style.transform =
-        "rotate(0deg)";
+        "rotate(90deg)";
     }
 }
 
